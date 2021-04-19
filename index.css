@@ -2,7 +2,7 @@
 	margin: 0px;
 	padding: 0px;
 	font-family: Roboto;
-	/* background: #e5e5e5; */
+	box-sizing: border-box;
 }
 html,
 body {
@@ -10,106 +10,120 @@ body {
 	height: 100%;
 	width: 100%;
 	background: #e5e5e5;
-	position: fixed;
-}
-.sidebar-content a {
-	color: white;
-	text-decoration: none;
-	display: block;
 }
 
-#sidebar,
-header,
-nav {
+#sidebar {
 	position: fixed;
 	width: 200px;
 	height: 100%;
+	background: #1e5f74;
+	transition: all 500ms linear;
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 24px;
 	line-height: 28px;
-}
-#sidebar {
 	left: 0px;
-	background: #1e5f74;
-	z-index: 1;
-	transition: all 500ms linear;
+	overflow: hidden;
 }
 #sidebar.active {
-	left: -150px;
+	width: 50px;
+	background: #1e5f74;
+}
+.toggle-roll {
+	position: relative;
+	padding-top: 20px;
+	padding-left: 15px;
+	width: 100%;
+	margin-bottom: 20px;
+	display: flex;
 }
 #roll-number {
+	position: relative;
+	margin-left: 5px;
 	color: white;
-	text-align: center;
-	/* width: 99px;*/
-	height: 28px;
-	margin-top: 12px;
-	margin-bottom: 30px;
+	text-align: right;
+	display: inline-block;
 }
 .sidebar-content {
-	position: absolute;
+	position: relative;
+	left: 0;
 	width: 100%;
 }
-.home,
-.about-me {
+.sidebar-content a {
+	position: relative;
+	color: white;
+	width: 100%;
+	display: flex;
+	padding-left: 5px;
+	height: 60px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	text-decoration: none;
+}
+
+.sidebar-content a:hover {
+	background-color: #133b5c;
+}
+.sidebar-content > li {
 	position: relative;
 	color: white;
 	list-style: none;
-	padding: 15px 0px;
-	padding-left: 20px;
-	width: 90%;
+	margin-bottom: 10px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
 	/* 15 pixel from top and bottom */
 	/* 10 pixel from left and right*/
 	border-bottom: 0px solid #133b5c;
 }
-.home_img {
-	margin-right: 5px;
+.sidebar-content .icon {
+	position: relative;
+	padding-left: 10px;
+	min-width: 50px;
+	display: inline-block;
+	margin: 0px;
 }
-
+.sidebar-content-text {
+	position: relative;
+	text-align: center;
+	margin-left: 20px;
+	display: inline-block;
+}
 .toggle-btn {
+	display: inline-block;
+	margin-right: 30px;
 	cursor: pointer;
-	position: absolute;
+	position: relative;
 	z-index: 2;
 	width: 15%;
 	height: 4%;
-	left: 10px;
-	top: 12px;
 }
 
 .toggle-btn > .toggle-btn-span {
 	display: block;
 	width: 25px;
-	height: 3px;
+	height: 5px;
 	background: white;
 	margin: 3px 0px;
 	border: 0.5px solid #1e5f74;
-	border-radius: 25px;
+	border-radius: 100px;
 }
 
 .toggle-btn > .toggle-btn-span-short {
 	display: block;
 	width: 15px;
-	height: 3px;
+	height: 5px;
 	background: white;
 	margin: 3px 0px;
 	border: 0.5px solid #1e5f74;
-	border-radius: 25px;
-}
-
-#home {
-	content: "\263B";
-}
-
-.home:hover,
-.about-me:hover {
-	background-color: #133b5c;
+	border-radius: 40px;
 }
 .container {
+	position: fixed;
 	height: 100%;
 	width: 100%;
 	left: 200px;
-	position: relative;
 }
 .container-child {
 	position: absolute;
@@ -236,29 +250,10 @@ td {
 }
 .add-div {
 	position: absolute;
-	bottom: 15px;
+	bottom: 30px;
 	width: 100%;
 }
 .fa-trash {
 	color: #ca2c2c;
 	cursor: pointer;
 }
-/* .main { */
-/* position: absolute; */
-/* z-index: 1; */
-/* left: 359px; */
-/* top: 77px; */
-/* right: ; */
-/* height: 100%; */
-/* width: 100%; */
-/* background: white; */
-/* } */
-/* .main-body { */
-/* position: absolute; */
-/* z-index: 0; */
-/* left: 200px; */
-/* top: 0px; */
-/* height: 100%; */
-/* width: 100%; */
-/* background: #e5e5e5; */
-/* } */

@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Home</title>
-		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="./index.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -13,34 +13,34 @@
 		<script src="./index.js"></script>
 	</head>
 	<body>
-		<header class="side">
-			<nav>
-				<div class="toggle-btn" onclick="toggleSidebar()">
+		<div id="sidebar">
+			<div class="toggle-roll" onclick="toggleSidebar()">
+				<span class="toggle-btn">
 					<span class="toggle-btn-span"></span>
 					<span class="toggle-btn-span"></span>
 					<span class="toggle-btn-span-short"></span>
-				</div>
-				<div id="sidebar">
-					<div id="roll-number">1805032</div>
-					<div class="sidebar-content">
-						<div class="home">
-							<a href="index.html">
-								<span>&#9787;</span>
-								<span>Home</span>
-							</a>
-						</div>
-						<div class="about-me">
-							<a href="AboutMe.html">
-								<span
-									><img src="./home-5-16.png" alt="" class="home_img"
-								/></span>
-								<span>About Me</span>
-							</a>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</header>
+				</span>
+				<span id="roll-number">1805032</span>
+			</div>
+			<ul class="sidebar-content">
+				<li>
+					<a href="index.html">
+						<span class="icon"
+							><i class="fa fa-smile-o" aria-hidden="true"></i
+						></span>
+						<span class="sidebar-content-text">&nbsp;Home</span>
+					</a>
+				</li>
+				<li>
+					<a href="AboutMe.html">
+						<span class="icon"
+							><i class="fa fa-home" aria-hidden="true"></i
+						></span>
+						<span class="sidebar-content-text">About Me</span>
+					</a>
+				</li>
+			</ul>
+		</div>
 		<div class="container">
 			<h1>My Meetings</h1>
 			<div class="child-container">

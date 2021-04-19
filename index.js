@@ -10,9 +10,9 @@ function toggleSidebar() {
 // 		},
 // 	});
 // }
-$(function () {
-	$(".nav-placeholder").load("nav.html");
-});
+// $(function () {
+// 	$(".nav-placeholder").load("nav.html");
+// });
 function Meeting(
 	meetingName,
 	no_of_people_attending,
@@ -71,8 +71,27 @@ function add() {
 	);
 	console.log(meeting);
 	let display = new Display();
-	display.add(meeting);
-	display.clear();
+	let empty = false;
+	if (
+		isEmpty(meetingName) ||
+		isEmpty(no_of_people_attending) ||
+		isEmpty(date) ||
+		isEmpty(startTime) ||
+		isEmpty(endTime)
+	) {
+		console.log("meetingName=", meetingName);
+		console.log("no_of_people_attending=", no_of_people_attending);
+		console.log("date=", date);
+		console.log("startTime=", startTime);
+		console.log("endTime=", endTime);
+		alert("Please input all the values");
+		empty = true;
+	}
+	if (empty) display.clear();
+	else {
+		display.add(meeting);
+		display.clear();
+	}
 }
 function isEmpty(value) {
 	return value == null || value === "";
