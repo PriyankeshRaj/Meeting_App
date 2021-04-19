@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home</title>
+		<link rel="stylesheet" href="index.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<script src="./index.js"></script>
+	</head>
+	<body>
+		<header class="side">
+			<nav>
+				<div class="toggle-btn" onclick="toggleSidebar()">
+					<span class="toggle-btn-span"></span>
+					<span class="toggle-btn-span"></span>
+					<span class="toggle-btn-span-short"></span>
+				</div>
+				<div id="sidebar">
+					<div id="roll-number">1805032</div>
+					<div class="sidebar-content">
+						<div class="home">
+							<a href="index.html">
+								<span>&#9787;</span>
+								<span>Home</span>
+							</a>
+						</div>
+						<div class="about-me">
+							<a href="AboutMe.html">
+								<span
+									><img src="./home-5-16.png" alt="" class="home_img"
+								/></span>
+								<span>About Me</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="container">
+			<h1>My Meetings</h1>
+			<div class="child-container">
+				<div class="container-child-top">
+					<form class="search" name="search-form">
+						<button class="search-button" type="submit">
+							<i class="fa fa-search"></i>
+						</button>
+						<input
+							class="search-box"
+							type="text"
+							placeholder="Search.."
+							name="search_input"
+							id="search_input"
+							onkeyup="searchTable()"
+						/>
+					</form>
+					<span class="from">
+						<label for="from">From:</label>
+						<input class="date-box"" type="date" id="from" name="from"
+						onchange="searchTable()"/>
+					</span>
+					<span class="to">
+						<label for="to">To:</label>
+						<input class="date-box"" type="date" id="to" name="to"
+						onchange="searchTable()"/>
+					</span>
+				</div>
+				<div class="container-child-bottom">
+					<table class="table" id="table_id">
+						<tr>
+							<th>Sl. no.</th>
+							<th>Meeting name</th>
+							<th>No. of People attending</th>
+							<th>Date</th>
+							<th>Start time</th>
+							<th>End time</th>
+							<th>Actions</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>Maya Data</td>
+							<td>97</td>
+							<td>2021-04-18</td>
+							<td>13:15</td>
+							<td>08:00</td>
+							<td><i class="fa fa-trash" onclick="deleteRow(this)"></i></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Next Round</td>
+							<td>40</td>
+							<td>2021-04-23</td>
+							<td>10:00</td>
+							<td>14:00</td>
+							<td><i class="fa fa-trash" onclick="deleteRow(this)"></i></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Final Round</td>
+							<td>10</td>
+							<td>2021-04-25</td>
+							<td>10:00</td>
+							<td>13:00</td>
+							<td><i class="fa fa-trash" onclick="deleteRow(this)"></i></td>
+						</tr>
+					</table>
+					<div class="add-div">
+						<span>
+							<input type="text" name="meetingName" id="meetingName" />
+						</span>
+						<span>
+							<input
+								type="text"
+								name="no_of_people_attending"
+								id="no_of_people_attending"
+							/>
+						</span>
+						<span>
+							<input type="date" name="date" id="date" placeholder="" />
+						</span>
+						<span>
+							<input type="time" name="startTime" id="startTime" />
+						</span>
+						<span>
+							<input type="time" name="endTime" id="endTime" />
+						</span>
+						<span>
+							<button onclick="add()" id="add">Add</button>
+						</span>
+					</div>
+					>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

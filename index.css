@@ -1,0 +1,264 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: Roboto;
+	/* background: #e5e5e5; */
+}
+html,
+body {
+	font-size: 16px;
+	height: 100%;
+	width: 100%;
+	background: #e5e5e5;
+	position: fixed;
+}
+.sidebar-content a {
+	color: white;
+	text-decoration: none;
+	display: block;
+}
+
+#sidebar,
+header,
+nav {
+	position: fixed;
+	width: 200px;
+	height: 100%;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 28px;
+}
+#sidebar {
+	left: 0px;
+	background: #1e5f74;
+	z-index: 1;
+	transition: all 500ms linear;
+}
+#sidebar.active {
+	left: -150px;
+}
+#roll-number {
+	color: white;
+	text-align: center;
+	/* width: 99px;*/
+	height: 28px;
+	margin-top: 12px;
+	margin-bottom: 30px;
+}
+.sidebar-content {
+	position: absolute;
+	width: 100%;
+}
+.home,
+.about-me {
+	position: relative;
+	color: white;
+	list-style: none;
+	padding: 15px 0px;
+	padding-left: 20px;
+	width: 90%;
+	/* 15 pixel from top and bottom */
+	/* 10 pixel from left and right*/
+	border-bottom: 0px solid #133b5c;
+}
+.home_img {
+	margin-right: 5px;
+}
+
+.toggle-btn {
+	cursor: pointer;
+	position: absolute;
+	z-index: 2;
+	width: 15%;
+	height: 4%;
+	left: 10px;
+	top: 12px;
+}
+
+.toggle-btn > .toggle-btn-span {
+	display: block;
+	width: 25px;
+	height: 3px;
+	background: white;
+	margin: 3px 0px;
+	border: 0.5px solid #1e5f74;
+	border-radius: 25px;
+}
+
+.toggle-btn > .toggle-btn-span-short {
+	display: block;
+	width: 15px;
+	height: 3px;
+	background: white;
+	margin: 3px 0px;
+	border: 0.5px solid #1e5f74;
+	border-radius: 25px;
+}
+
+#home {
+	content: "\263B";
+}
+
+.home:hover,
+.about-me:hover {
+	background-color: #133b5c;
+}
+.container {
+	height: 100%;
+	width: 100%;
+	left: 200px;
+	position: relative;
+}
+.container-child {
+	position: absolute;
+	height: 65%;
+	width: 75%;
+	left: 80px;
+	top: 160px;
+	background: #ffffff;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container > h1 {
+	position: absolute;
+	top: 55px;
+	left: 50px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 40px;
+	line-height: 56px;
+}
+.paragraph {
+	position: relative;
+	top: 25px;
+	left: 40px;
+}
+.projects {
+	position: relative;
+	left: 70px;
+	top: 40px;
+}
+.child-container {
+	position: absolute;
+	height: 70%;
+	width: 75%;
+	left: 80px;
+	top: 160px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.container-child-top {
+	flex-grow: 2;
+	background: white;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.container-child-bottom {
+	flex-grow: 8;
+	margin-top: 65px;
+	background: white;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.search {
+	position: relative;
+	float: left;
+	left: 10px;
+	top: 30%;
+	padding: 6px;
+	margin-right: 16px;
+	font-size: 18px;
+}
+input {
+	border-left: 0px;
+	border-top: 0px;
+	border-right: 0px;
+}
+.search-button {
+	background-color: white;
+	border: 0px;
+	cursor: pointer;
+}
+.from,
+.to {
+	position: relative;
+	margin-left: 55px;
+	top: 41%;
+	padding: 6px;
+	font-size: 15px;
+}
+
+.table {
+	margin: 2% 4.5%;
+	width: 90%;
+	border-collapse: collapse;
+}
+th {
+	color: #1e5f74;
+	padding-bottom: 25px;
+	text-align: left;
+}
+td {
+	text-align: left;
+	padding-top: 0.5em;
+	padding-bottom: 1em;
+}
+.container-child-bottom span > input {
+	width: 7%;
+}
+#meetingName {
+	margin-left: 120px;
+}
+#no_of_people_attending {
+	margin-left: 120px;
+	width: 4%;
+}
+#date {
+	margin-left: 200px;
+	width: 10.5%;
+}
+#startTime {
+	margin-left: 14px;
+}
+#endTime {
+	margin-left: 44px;
+}
+#add {
+	float: right;
+	margin-right: 130px;
+	border-radius: 5px;
+	width: 3.3%;
+	background: #1e5f74;
+	color: white;
+	cursor: pointer;
+}
+.add-div {
+	position: absolute;
+	bottom: 15px;
+	width: 100%;
+}
+.fa-trash {
+	color: #ca2c2c;
+	cursor: pointer;
+}
+/* .main { */
+/* position: absolute; */
+/* z-index: 1; */
+/* left: 359px; */
+/* top: 77px; */
+/* right: ; */
+/* height: 100%; */
+/* width: 100%; */
+/* background: white; */
+/* } */
+/* .main-body { */
+/* position: absolute; */
+/* z-index: 0; */
+/* left: 200px; */
+/* top: 0px; */
+/* height: 100%; */
+/* width: 100%; */
+/* background: #e5e5e5; */
+/* } */
